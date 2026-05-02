@@ -15,8 +15,8 @@
 | Architecture note | ✅ Included | `/ARCHITECTURE.md` in repo |
 | AI workflow note | ✅ Included | `/AI_WORKFLOW.md` in repo |
 | Automated test | ✅ Included | `/filterDocs.test.js` in repo — run with `node filterDocs.test.js` |
-| Walkthrough video | ✅ Included | See `VIDEO.txt` in repo |
-| Screenshots | ✅ Included | See `/screenshots` folder in repo |
+| Walkthrough video | ✅ Included | See Google Drive submission folder |
+| Screenshots | ✅ Included | See Google Drive submission folder |
 | SUBMISSION.md | ✅ This file | `/SUBMISSION.md` in repo |
  
 ---
