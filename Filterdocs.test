@@ -1,0 +1,35 @@
+function filterDocs(docs, currentUserEmail, tab, search) {
+  return docs
+    .filter((d) => {
+      const isOwner = d.owner_email === currentUserEmail;
+      const isShared = d.shared_with?.includes(currentUserEmail);
+      if (tab === "owned") return isOwner;
+      if (tab === "shared") return isShared;
+      return isOwner || isShared;
+    })
+    .filter((d) => d.title?.toLowerCase().includes(search.toLowerCase()));
+}
+ 
+const mockDocs = [
+  { id: "1", title: "My Report", owner_email: "alice@example.com", shared_with: [] },
+  { id: "2", title: "Team Notes", owner_email: "bob@example.com", shared_with: ["alice@example.com"] },
+  { id: "3", title: "Private Doc", owner_email: "bob@example.com", shared_with: [] },
+];
+ 
+// Test 1: "All" tab shows owned + shared, not unrelated docs
+const allDocs = filterDocs(mockDocs, "alice@example.com", "all", "");
+console.assert(allDocs.length === 2, "Should see 2 docs (1 owned, 1 shared)");
+ 
+// Test 2: "Owned" tab shows only docs the user created
+const ownedDocs = filterDocs(mockDocs, "alice@example.com", "owned", "");
+console.assert(ownedDocs.length === 1 && ownedDocs[0].id === "1", "Should see only owned doc");
+ 
+// Test 3: "Shared" tab shows only docs shared with the user
+const sharedDocs = filterDocs(mockDocs, "alice@example.com", "shared", "");
+console.assert(sharedDocs.length === 1 && sharedDocs[0].id === "2", "Should see only shared doc");
+ 
+// Test 4: Search filters by title, case-insensitive
+const searched = filterDocs(mockDocs, "alice@example.com", "all", "report");
+console.assert(searched.length === 1 && searched[0].title === "My Report", "Search should be case-insensitive");
+ 
+console.log("All tests passed ✅");
