@@ -26,4 +26,5 @@
 - DocMax is fully hosted — no local setup is required. Visit the live URL to test the app directly. 
 - The automated test (`filterDocs.test.js`) is a unit test for the core document filtering logic. It requires only Node.js and no additional dependencies.
 - File upload is scoped to `.txt` and `.html` formats. Multi-format support was explored but depended on platform-incompatible dependencies and was intentionally cut in favour of reliability. This decision is documented in the architecture note.
+- Full source code is hosted on Basee44's platform. Key source files are included in this repository. A GitHub sync was available but required a paid plan; representative files have been added manually instead. 
  
