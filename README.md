@@ -15,6 +15,7 @@ A lightweight collaborative document editor inspired by Google Docs, built for s
 - **Tabs** — Filter between documents you own vs. documents shared with you
 - **Rename & Delete** — Full document lifecycle management
 - **Authentication** — Secure sign-in; all documents are scoped to the logged-in user
+- **File Upload** — Upload files that are .html or .txt format
 ---
  
 ## How to Run / Access
