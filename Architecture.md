@@ -20,10 +20,10 @@ Document filtering and search run client-side after a single fetch. This keeps t
 ---
  
 ## What I Would Do Differently With More Time
-Real-time multiplayer cursors
-Document version history / restore
-Folder/tag organization
-Richer text formatting (tables, embeds)
-Add Export to PDF
-Add a commenting system 
-Add more fonts and sizes
+- Real-time multiplayer cursors
+- Document version history / restore
+- Folder/tag organization
+- Richer text formatting (tables, embeds)
+- Add Export to PDF
+- Add a commenting system 
+- Add more fonts and sizes
